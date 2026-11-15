@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GLOIRE BUSINESS</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f7fc;
+  color: #222;
+}
+header {
+  background: #0756a5;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+header h1 { margin: 0; }
+nav {
+  background: white;
+  padding: 15px;
+  text-align: center;
+}
+nav a {
+  color: #0756a5;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  text-align: center;
+  padding: 35px 15px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  height: 110px;
+  object-fit: contain;
+}
+button {
+  background: #0756a5;
+  color: white;
+  border: 0;
+  padding: 12px;
+  border-radius: 8px;
+}
+footer {
+  background: #0756a5;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>GLOIRE BUSINESS</h1>
+<p>Votre boutique en ligne à Kolwezi</p>
+</header>
+
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#boutique">Boutique</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="accueil">
+<h2>Bienvenue chez GLOIRE BUSINESS</h2>
+<p>Découvrez nos produits et commandez facilement.</p>
+</section>
+
+<h2 style="text-align:center" id="boutique">
+Nos produits
+</h2>
+
+<section class="products">
+
+<div class="card">
+<img src="https://placehold.co/200x150?text=Produit+1">
+<h3>Produit 1</h3>
+<p>Prix : 25 000 FC</p>
+<button onclick="commander('Produit 1')">
+Commander
+</button>
+</div>
+
+<div class="card">
+<img src="https://placehold.co/200x150?text=Produit+2">
+<h3>Produit 2</h3>
+<p>Prix : 35 000 FC</p>
+<button onclick="commander('Produit 2')">
+Commander
+</button>
+</div>
+
+</section>
+
+<footer id="contact">
+<h3>GLOIRE BUSINESS</h3>
+<p>Responsable : Gloire Bukasa</p>
+<p>Kolwezi - RDC</p>
+<p>WhatsApp : 0834963470</p>
+</footer>
+
+<script>
+function commander(produit) {
+  let message = "Bonjour GLOIRE BUSINESS, je souhaite commander : " + produit;
+  window.open(
+    "https://wa.me/243834963470?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
